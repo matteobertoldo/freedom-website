@@ -1,0 +1,19 @@
+{
+  "name": "freedomhood-website",
+  "version": "0.0.1",
+  "description": "Freedom Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://matteobertoldo@github.com/matteobertoldo/freedomhood-website.git"
+  },
+  "author": "Matteo Bertoldo - Valentina Trevisanello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matteobertoldo/freedom-website/issues"
+  },
+  "homepage": "https://github.com/matteobertoldo/freedom-website#readme"
+}
