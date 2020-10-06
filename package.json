@@ -1,19 +1,62 @@
 {
-  "name": "freedomhood-website",
-  "version": "0.0.1",
-  "description": "Freedom Website",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
+  "name": "freedomhood",
+  "version": "0.0.2",
+  "description": "Source code of Freedomhood website.",
+  "keywords": [
+    "hugo-site",
+    "nodejs",
+    "threejs"
+  ],
+  "homepage": "https://github.com/matteobertoldo/freedomhood#readme",
+  "main": "",
+  "author": {
+    "name": "Matteo Bertoldo",
+    "email": "mrbert93@gmail.com",
+    "url": "https://github.com/matteobertoldo/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matteobertoldo/freedomhood/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://matteobertoldo@github.com/matteobertoldo/freedomhood-website.git"
+    "url": "https://matteobertoldo@github.com/matteobertoldo/freedomhood.git"
   },
-  "author": "Matteo Bertoldo - Valentina Trevisanello",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/matteobertoldo/freedom-website/issues"
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "remark-cli": "^8.0.1",
+    "remark-lint-no-dead-urls": "^1.1.0",
+    "remark-preset-lint-recommended": "^4.0.1"
   },
-  "homepage": "https://github.com/matteobertoldo/freedom-website#readme"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.md": "remark .",
+    "*.json": "prettier --write"
+  },
+  "scripts": {
+    "format": "prettier --config .prettierrc --write \"./**/*.{md,js,json}\"",
+    "lint": "npm run lint:js && npm run lint:markdown",
+    "lint:fix": "npm run lint:js:fix",
+    "lint:js": "eslint .",
+    "lint:markdown": "remark .",
+    "parse": "npm run format && npm run lint"
+  }
 }

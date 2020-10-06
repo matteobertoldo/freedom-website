@@ -1,3 +1,3 @@
 # Freedomhood
 
-Freedom Website
+Source code of Freedomhood website.
