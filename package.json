@@ -53,6 +53,7 @@
     "*.json": "prettier --write"
   },
   "scripts": {
+    "build": "hugo",
     "format": "prettier --config .prettierrc --write \"./**/*.{md,js,json}\"",
     "lint": "npm run lint:js && npm run lint:markdown",
     "lint:fix": "npm run lint:js:fix",

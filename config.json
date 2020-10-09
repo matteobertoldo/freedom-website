@@ -1,0 +1,21 @@
+{
+  "archetypeDir": "src/templates/archetypes",
+  "assetDir": "src/templates/assets",
+  "baseURL": "https://matteobertoldo.github.io/freedomhood/",
+  "contentDir": "src/templates/content",
+  "dataDir": "src/templates/data",
+  "defaultContentLanguage": "it",
+  "disableKinds": "taxonomy",
+  "enableRobotsTXT": true,
+  "googleAnalytics": "",
+  "ignoreErrors": ["error-disable-taxonomy"],
+  "languageCode": "en-EN",
+  "layoutDir": "src/templates/layouts",
+  "minify": {
+    "minifyOutput": false
+  },
+  "publishDir": "docs",
+  "staticDir": "src/templates/static",
+  "themesDir": "src/templates/themes",
+  "title": "Freedomhood"
+}
