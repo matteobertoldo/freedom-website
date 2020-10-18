@@ -5,6 +5,7 @@
   "contentDir": "src/templates/content",
   "dataDir": "src/templates/data",
   "defaultContentLanguage": "it",
+  "disableHugoGeneratorInject": true,
   "disableKinds": "taxonomy",
   "enableRobotsTXT": true,
   "googleAnalytics": "",
