@@ -1,2 +1,11 @@
-dist/
+# all files in `docs` dir for github pages
+docs/*
+!docs/assets/
+
+# all generated assets exept `fonts` dir
+docs/assets/*
+!/docs/assets/fonts/
+
+# external modules
 node_modules/
+resources/

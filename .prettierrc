@@ -9,7 +9,13 @@
   "useTabs": false,
   "overrides": [
     {
-      "files": ["*.md"],
+      "files": ["*.json"],
+      "options": {
+        "printWidth": 80
+      }
+    },
+    {
+      "files": "*.md",
       "options": {
         "tabWidth": 4
       }
