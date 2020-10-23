@@ -27,9 +27,6 @@ module.exports = (env) => {
       colors: true,
       entrypoints: false,
       modules: false
-    },
-    watchOptions: {
-      ignored: ['./src/svg/**/*']
     }
   };
 };
