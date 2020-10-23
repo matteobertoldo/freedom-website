@@ -8,8 +8,10 @@ const buildEntries = (pattern) =>
     return { ...entries, [name]: filename };
   }, {});
 
-const SRC = './src';
-const pattern = [`${SRC}/js/*.js`, `${SRC}/scss/**/[^_]*.scss`];
-const entries = { ...buildEntries(pattern) };
+const root = './src';
+const src = {
+  patterns: [`${root}/js/*.js`, `${root}/scss/**/[^_]*.scss`],
+  svg: `${root}/svg/**/*.svg`
+};
 
-module.exports = entries;
+module.exports = { buildEntries, src };

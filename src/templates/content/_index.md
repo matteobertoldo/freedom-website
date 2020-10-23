@@ -1,5 +1,4 @@
 ---
-title: 'Home Sweet Home'
+title: 'Freedomhood'
+description: 'Freedomhood.'
 ---
-
-Freedomhood home page

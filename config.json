@@ -10,10 +10,9 @@
   "enableRobotsTXT": true,
   "googleAnalytics": "",
   "ignoreErrors": ["error-disable-taxonomy"],
-  "languageCode": "en-EN",
   "layoutDir": "src/templates/layouts",
   "minify": {
-    "minifyOutput": false
+    "minifyOutput": true
   },
   "publishDir": "docs",
   "staticDir": "src/templates/static",
