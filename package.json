@@ -79,9 +79,9 @@
   "lint-staged": {
     "*.{html,js,json,scss,svg}": "prettier --write",
     "*.html": "htmlhint",
-    "*.js": "eslint --fix && eslint",
+    "*.js": "eslint",
     "*.md": "remark",
-    "*.scss": "stylelint --fix && stylelint"
+    "*.scss": "stylelint"
   },
   "scripts": {
     "browserlist": "npx browserslist",
