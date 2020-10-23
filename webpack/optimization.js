@@ -9,12 +9,7 @@ module.exports = (development) => {
     minimizer: [
       new CssMinimizerPlugin({
         minimizerOptions: {
-          preset: [
-            'default',
-            {
-              discardComments: { removeAll: true }
-            }
-          ]
+          preset: ['default']
         }
       }),
       new ESBuildMinifyPlugin()

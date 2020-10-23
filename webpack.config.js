@@ -1,18 +1,18 @@
 'use strict';
 
 const { join } = require('path');
-const entry = require('./webpack/entry');
+const { buildEntries, src } = require('./webpack/entry');
 const loaders = require('./webpack/loaders');
 const optimization = require('./webpack/optimization');
 const plugins = require('./webpack/plugins');
 
-const OUTPUT = 'docs/assets';
+const OUTPUT = 'src/templates/static/assets';
 
 module.exports = (env) => {
   const development = !env || !env.production;
   return {
     devtool: development ? 'source-map' : false,
-    entry,
+    entry: { ...buildEntries(src.patterns) },
     mode: development ? 'development' : 'production',
     module: {
       rules: loaders(development)
@@ -26,8 +26,10 @@ module.exports = (env) => {
     stats: {
       colors: true,
       entrypoints: false,
-      excludeModules: true,
       modules: false
+    },
+    watchOptions: {
+      ignored: ['./src/svg/**/*']
     }
   };
 };

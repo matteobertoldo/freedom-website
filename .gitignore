@@ -1,10 +1,9 @@
 # all files in `docs` dir for github pages
-docs/*
-!docs/assets/
+docs/
 
 # all generated assets exept `fonts` dir
-docs/assets/*
-!/docs/assets/fonts/
+src/templates/static/assets/*
+!src/templates/static/assets/fonts/
 
 # external modules
 node_modules/
