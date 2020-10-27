@@ -10,6 +10,8 @@ const OUTPUT = 'src/templates/static/assets';
 
 module.exports = (env) => {
   const development = !env || !env.production;
+  const [, , flag] = process.argv;
+
   return {
     devtool: development ? 'source-map' : false,
     entry: { ...buildEntries(src.patterns) },
@@ -22,7 +24,7 @@ module.exports = (env) => {
       path: join(__dirname, OUTPUT),
       filename: 'js/[name].js'
     },
-    plugins,
+    plugins: plugins(flag),
     stats: {
       colors: true,
       entrypoints: false,
