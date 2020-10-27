@@ -8,10 +8,10 @@ const buildEntries = (pattern) =>
     return { ...entries, [name]: filename };
   }, {});
 
-const root = './src';
+const ROOT = './src';
 const src = {
-  patterns: [`${root}/js/*.js`, `${root}/scss/**/[^_]*.scss`],
-  svg: `${root}/svg/**/*.svg`
+  patterns: [`${ROOT}/js/*.js`, `${ROOT}/scss/**/[^_]*.scss`],
+  svg: `${ROOT}/svg/**/*.svg`
 };
 
 module.exports = { buildEntries, src };
