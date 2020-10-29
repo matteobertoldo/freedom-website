@@ -6,7 +6,6 @@
     "webextensions": true
   },
   "extends": ["plugin:prettier/recommended", "standard"],
-  "globals": {},
   "rules": {
     "global-require": "error",
     "import/extensions": ["error", "never"],
