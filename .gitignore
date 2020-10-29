@@ -1,5 +1,6 @@
-# all files in `docs` dir for github pages
+# all files in `docs` & `public` dir for github pages
 docs/
+public/
 
 # external modules
 node_modules/
