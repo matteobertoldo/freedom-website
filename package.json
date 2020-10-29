@@ -90,7 +90,7 @@
     "browserlist": "npx browserslist",
     "build": "npm run clean && webpack && hugo",
     "build:production": "npm run clean && webpack --env production && hugo -e production",
-    "clean": "npx rimraf docs/*",
+    "clean": "npx rimraf public/*",
     "format": "prettier --config .prettierrc --write \"./**/*.{md,js,json,scss,svg,xml,yml}\"",
     "lint": "npm run lint:html && npm run lint:js && npm run lint:markdown && npm run lint:scss",
     "lint:html": "npx htmlhint \"./src/templates/**/*.html\"",
