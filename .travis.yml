@@ -2,24 +2,15 @@ language: node_js
 node_js: '12.19.0' # .nvmrc
 os: linux
 
-install:
-  - rm -rf docs || exit 0
-
 before_script:
   - nvm use
   - npm i
   - npm run parse
 
 script:
-  -
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  local_dir: docs
-  github_token: $GITHUB_TOKEN # https://travis-ci.org/github/matteobertoldo/freedomhood/settings
-  on:
-    branch: master
+  - curl -s -O https://raw.githubusercontent.com/matteobertoldo/ci/deploy.sh
+  - chmod u+x deploy.sh
+  - ./deploy.sh
 
 notifications:
   email:

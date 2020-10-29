@@ -1,2 +1,22 @@
+#!/bin/sh
+
+echo "Deleting old publication"
+rm -rf public
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
+
+echo "Checking out gh-pages branch into public"
+git worktree add -B gh-pages public origin/gh-pages
+
+echo "Removing existing files"
+rm -rf public/*
+
+echo "Generating site"
 npm run build:production
-cd public && git add --all && git commit -m "build: gh-pages" && cd ..
+
+echo "Updating gh-pages branch"
+cd public && git add --all && git commit -m "ci: gh-pages"
+
+echo "Pushing to github"
+git push --all
