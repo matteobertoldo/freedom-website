@@ -1,0 +1,27 @@
+language: node_js
+node_js: '12.19.0' # .nvmrc
+os: linux
+
+install:
+  - rm -rf docs || exit 0
+
+before_script:
+  - nvm use
+  - npm i
+  - npm run parse
+
+script:
+  -
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs
+  github_token: $GITHUB_TOKEN # https://travis-ci.org/github/matteobertoldo/freedomhood/settings
+  on:
+    branch: master
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
