@@ -13,7 +13,6 @@
   "minify": {
     "minifyOutput": true
   },
-  "publishDir": "docs",
   "staticDir": "src/templates/static",
   "themesDir": "src/templates/themes",
   "title": "Freedomhood"

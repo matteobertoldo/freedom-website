@@ -1,12 +1,13 @@
-# all files in `docs` dir for github pages
+# all files in `docs` & `public` dir for github pages
 docs/
+public/
+
+# external modules
+node_modules/
+resources/
 
 # all generated assets exept `fonts`, `favicons` & `media` dirs
 src/templates/static/assets/*
 !src/templates/static/assets/fonts/
 !src/templates/static/assets/favicons/
 !src/templates/static/assets/media/
-
-# external modules
-node_modules/
-resources/
