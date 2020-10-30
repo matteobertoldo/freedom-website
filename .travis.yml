@@ -17,8 +17,20 @@ install:
   - sudo dpkg -i hugo_0.76.5_Linux-64bit.deb
 
 script:
-  - chmod u+x ./deploy.sh
-  - ./deploy.sh
+  - npm run build:production
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: public
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  target_branch: gh-pages
+  on:
+    branch: master
+
+git:
+  depth: 10
 
 notifications:
   email:
