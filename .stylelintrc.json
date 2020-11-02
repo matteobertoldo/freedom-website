@@ -1,8 +1,8 @@
 {
   "extends": ["stylelint-config-prettier", "stylelint-config-standard"],
   "ignoreFiles": [
+    "public/assets/css/**/*",
     "src/templates/static/assets/css/**/*",
-    "docs/assets/css/**/*",
     "node_modules/**"
   ],
   "plugins": ["stylelint-scss", "stylelint-no-unsupported-browser-features"],
