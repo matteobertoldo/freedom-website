@@ -1,3 +1,5 @@
 public/
-src/templates/static/
+src/templates/static/css/
+src/templates/static/js/
+src/templates/static/svg/
 package-lock.json
