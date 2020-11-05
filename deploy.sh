@@ -19,4 +19,4 @@ echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "ci: gh-pages"
 
 echo "Pushing to github"
-git push --all
+git push --all https://${GITHUB_TOKEN}@github.com/matteobertoldo/freedomhood.git
