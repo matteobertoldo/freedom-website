@@ -15,5 +15,4 @@
 Check all those that are applicable and complete. Put an `x` between the brackets (without spaces).
 
 -   [ ] Merged with latest `master` branch
--   [ ] Add change details to `CHANGELOG.md`
 -   [ ] CI/CD passes
