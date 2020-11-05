@@ -84,7 +84,7 @@
     "*.{html,js,json,scss,svg,xml,yml}": "prettier --write",
     "*.html": "htmlhint",
     "*.js": "eslint",
-    "*.md": "remark",
+    "*.md": "remark --silently-ignore",
     "*.scss": "stylelint"
   },
   "scripts": {
