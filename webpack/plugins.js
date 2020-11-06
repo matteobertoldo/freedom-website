@@ -4,8 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { ESBuildPlugin } = require('esbuild-loader');
 const { src } = require('./entry');
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const WebpackShellPluginNext = require('webpack-shell-plugin-next');
@@ -16,7 +16,7 @@ const plugins = (flag) => {
     new CleanTerminalPlugin({ skipFirstRun: true }),
     new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: CLEAN_PATTERN }),
     new ESBuildPlugin(),
-    new FixStyleOnlyEntriesPlugin({ silent: true }),
+    new RemoveEmptyScriptsPlugin({ silent: true }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: '[id].css'
