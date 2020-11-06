@@ -13,13 +13,13 @@
       src="https://travis-ci.com/matteobertoldo/freedomhood.svg?branch=master"
     />
   </a>
-  <a href="https://david-dm.org/dev/matteobertoldo/freedomhood">
+  <a href="https://david-dm.org/matteobertoldo/freedomhood?type=dev">
     <img
       alt="devDependencies"
       src="https://img.shields.io/david/dev/matteobertoldo/freedomhood"
     />
   </a>
-  <a href="https://david-dm.org/dev/matteobertoldo/freedomhood">
+  <a href="https://david-dm.org/matteobertoldo/freedomhood">
     <img
       alt="dependencies"
       src="https://img.shields.io/david/matteobertoldo/freedomhood"
