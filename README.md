@@ -56,7 +56,7 @@ The above steps have been tested with [`Homebrew`](https://brew.sh) (package man
 ## Dependency Installation
 
 ```sh
-$ git checkout https://github.com/matteobertoldo/freedomhood.git
+$ git clone https://github.com/matteobertoldo/freedomhood.git
 $ cd freedomhood
 $ nvm use
 $ npm i
