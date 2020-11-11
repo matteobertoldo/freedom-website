@@ -19,15 +19,18 @@ module.exports = (development) => [
           esModule: false
         }
       },
-      'css-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          url: false
+        }
+      },
+      'postcss-loader',
       {
         loader: 'sass-loader',
         options: {
           sourceMap: development
         }
-      },
-      {
-        loader: 'postcss-loader'
       }
     ]
   }

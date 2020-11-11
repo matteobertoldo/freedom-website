@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+}
+
+[data-application-render] {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-application-main-content] {
+  flex: 1 0 auto;
+}

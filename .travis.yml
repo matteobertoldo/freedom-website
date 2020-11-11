@@ -2,13 +2,6 @@ language: node_js
 node_js: '12.19.0' # .nvmrc
 os: linux
 
-secure: 'P4QAxrrCGWb9HkE9Dtymf8oJa0Zjqn9gbU6Od464LaGY6y1dBSun671HzK4xVdJR4+si2t7kMjXV/vBiLjmDhGVYb5vplKqo0mZ6oHj5pOcQBkX4fcUhEU5AMAW8aLSCiow6j3XMTc0XzKuMZBnr3fmOJrLT9prmnPiTQMWLBQLeCqremPaIel9dtNzxW5wneTI34PbKqDxUwHAyZ7Oy4XxGtpXL6depD/NvhRv5VIttPqQCCHWBvzOk5+p2WPWk/S3VayPbfi+MsGvVplCvxSS7QxZKzR9AQRLlXbbsJwElMs5MGUwo57/TffFTTTNGiUjqceVvS+Ce/JS66mkMHmCcmaV0SCQ2sUqPg0Z98cQanNxAwvnOplnlZ1jN204kXIQomlImYK9xYfUrhRQUzKw1TqADEeoIYEgZoQupBstuzRVLovyOsuDhI/c1JFcnxmyKcPJsKPhiYSQjAW47NO99bFqAyPcpoQxxCyqmcGX6ZHGxtyQiIo3R/Q1AAIMbldV49nh79AHg+Jrb+o1pzJVtHWm72o80gabqKiEhDxadN8zwI+GPUs9sSIrULZ7VIgNTz+vsO8boq66bGUkPTVWCznNgmy89ZD2sfa9JzXh7GPXAKwS3Y/KdpjMznCLt0r+yK0M+r03jSmBW8DZ7E7ob4K+dr0h3TuG2FbUCKOg='
-
-addons:
-  apt:
-    packages:
-      - git
-
 before_script:
   - nvm use
   - npm i
@@ -19,8 +12,16 @@ install:
   - sudo dpkg -i hugo_0.76.5_Linux-64bit.deb
 
 script:
-  - chmod u+x ./deploy.sh
-  - if [ $TRAVIS_BRANCH = 'master' ]; then ./deploy.sh; fi
+  - npm run build:production
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: public
+  on:
+    branch: master
 
 git:
   depth: 10

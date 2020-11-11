@@ -1,3 +1,7 @@
 {
+  "fonts": {
+    "files_name": ["Ortica-Bold", "Ortica-Light"],
+    "path": "assets/fonts/"
+  },
   "og_image": "assets/media/images/open-graph/og-image.jpg"
 }

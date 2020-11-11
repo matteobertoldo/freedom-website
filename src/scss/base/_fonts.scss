@@ -1,0 +1,10 @@
+$fonts-path: '../fonts/';
+
+@include font-face('Ortica', bold, 'Ortica Bold', $fonts-path, true);
+@include font-face('Ortica', normal, 'Ortica Light', $fonts-path, true);
+
+body {
+  font-family: var(--application-base-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
