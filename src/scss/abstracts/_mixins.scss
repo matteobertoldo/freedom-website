@@ -1,0 +1,24 @@
+/// Generate the CSS `@font-face` rule dinamically.
+/// @param {String} $font-name - The `font` name.
+/// @param {Integer|Keyword} $font-weight - The `font-weight` value as integer or keyword.
+/// @param {String} $font-name-local - The name of the font for `local()` on `src` declaration.
+/// @param {Boolean} $unicode-range - Boolean param for `unicode-range` support.
+/// @return {Keyword} - Custom @font-face rule.
+
+@mixin font-face($font-name, $font-weight, $font-name-local, $fonts-path, $unicode-range) {
+  @font-face {
+    font-family: quote($font-name);
+    font-weight: $font-weight;
+    font-style: normal;
+    font-display: swap;
+    // prettier-ignore
+    src:
+      local(quote($font-name-local)),
+      url('#{$fonts-path}#{str-replace($font-name-local, ' ', '-')}.woff2') format('woff2'),
+      url('#{$fonts-path}#{str-replace($font-name-local, ' ', '-')}.woff') format('woff');
+
+    @if $unicode-range {
+      unicode-range: U+000-5FF; // stylelint-disable-line
+    }
+  }
+}

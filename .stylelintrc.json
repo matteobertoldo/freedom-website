@@ -32,6 +32,7 @@
           "if",
           "include",
           "mixin",
+          "return",
           "use"
         ]
       }
@@ -44,6 +45,8 @@
       }
     ],
     "color-named": "never",
+    "declaration-block-no-duplicate-properties": true,
+    "function-disallowed-list": ["rem-calc"],
     "function-parentheses-space-inside": "never",
     "max-line-length": 450,
     "max-nesting-depth": [
@@ -63,7 +66,7 @@
     "scss/at-function-parentheses-space-before": "never",
     "scss/at-function-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
     "scss/at-import-no-partial-leading-underscore": true,
-    "scss/at-import-partial-extension-blacklist": ["css", "scss"],
+    "scss/at-import-partial-extension-blacklist": ["scss"],
     "scss/at-mixin-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
     "scss/at-rule-no-unknown": true,
     "scss/comment-no-empty": true,
@@ -71,13 +74,13 @@
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/dollar-variable-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-    "scss/double-slash-comment-whitespace-inside": "never",
+    "scss/double-slash-comment-whitespace-inside": "always",
     "scss/no-duplicate-mixins": true,
     "scss/percent-placeholder-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
     "scss/selector-nest-combinators": "always",
     "scss/selector-no-redundant-nesting-selector": true,
-    "scss/selector-no-union-class-name": true,
     "string-quotes": "single",
+    "unit-disallowed-list": ["em", "rem"],
     "value-no-vendor-prefix": true
   }
 }
