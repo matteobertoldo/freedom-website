@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body data-application-render>
+    <main data-application-main-content>
+      <!-- prettier-ignore -->
+      {{ .Content }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

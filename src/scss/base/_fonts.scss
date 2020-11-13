@@ -5,6 +5,7 @@ $fonts-path: '../fonts/';
 
 body {
   font-family: var(--application-base-font);
+  font-feature-settings: 'liga' 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

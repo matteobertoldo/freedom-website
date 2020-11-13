@@ -51,7 +51,7 @@ $ brew install nvm
 $ brew nvm info #follow the instructions on how to properly install nvm
 ```
 
-The above steps have been tested with [`Homebrew`](https://brew.sh) (package manager for macOS or Linux), if you are using a different OS please consider the alternatives for installing `nvm` like [`Chocolately`](https://chocolatey.org).
+The above steps have been tested with [`Homebrew`](https://brew.sh) (package manager for macOS or Linux), if you are using a different OS please consider the alternatives for installing [`nvm`](https://github.com/nvm-sh/nvm) like [`Chocolately`](https://chocolatey.org).
 
 ## Dependency Installation
 

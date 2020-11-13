@@ -7,7 +7,7 @@
   "disableHugoGeneratorInject": true,
   "disableKinds": ["taxonomy", "RSS"],
   "enableRobotsTXT": true,
-  "googleAnalytics": "",
+  "googleAnalytics": "UA-",
   "ignoreErrors": ["error-disable-taxonomy"],
   "layoutDir": "src/templates/layouts",
   "minify": {
