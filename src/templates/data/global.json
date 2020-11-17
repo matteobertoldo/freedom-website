@@ -1,7 +1,15 @@
 {
-  "fonts": {
-    "files_name": ["Ortica-Bold", "Ortica-Light"],
-    "path": "assets/fonts/"
+  "favicons": {
+    "apple_touch_icon": "assets/favicons/apple-touch-icon.png",
+    "ico": "assets/favicons/favicon.ico",
+    "icon_32x32": "assets/favicons/favicon-32x32.png",
+    "icon_16x16": "assets/favicons/favicon-16x16.png",
+    "msapplication_config": "assets/favicons/browserconfig.xml",
+    "webmanifest": "assets/favicons/site.webmanifest"
   },
-  "og_image": "assets/media/images/open-graph/og-image.jpg"
+  "fonts": {
+    "files": ["assets/fonts/Ortica-Bold", "assets/fonts/Ortica-Light"]
+  },
+  "og_image": "assets/media/images/open-graph/og-image.jpg",
+  "stylesheet_path": "assets/css/app.css"
 }

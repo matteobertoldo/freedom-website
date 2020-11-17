@@ -4,29 +4,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
   <!-- prettier-ignore -->
-  {{ partial "head/meta.social.html" . }}
+  {{ partial "head/meta-og.html" . }}
   {{ partial "head/favicons.html" . }}
 
   <!-- stylesheet(s) -->
-  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="{{ .Site.Data.global.stylesheet_path | absURL }}" />
 
   <!-- fonts (https://www.freecodecamp.org/news/web-fonts-in-2018-f191a48367e8/) -->
-  <link
-    rel="preload"
-    as="font"
-    href="{{ .Site.Data.global.fonts.path | absURL }}Ortica-Bold.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    as="font"
-    href="{{ .Site.Data.global.fonts.path | absURL }}Ortica-Light.woff2"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
+  {{ range .Site.Data.global.fonts.files }}
+  <link rel="preload" as="font" href="{{ . | absURL }}.woff2" type="font/woff2" crossorigin="anonymous" />
+  {{ end }}
 
   <!-- baseURL -->
   <base href="{{ .Site.BaseURL }}" />
+
+  <!-- analytics -->
+  {{ template "_internal/google_analytics_async.html" . }}
   <title>{{ .Title }}</title>
 </head>
