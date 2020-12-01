@@ -12,7 +12,9 @@ module.exports = (development) => {
           preset: ['default']
         }
       }),
-      new ESBuildMinifyPlugin()
+      new ESBuildMinifyPlugin({
+        target: 'es2015'
+      })
     ]
   };
 };

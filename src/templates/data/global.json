@@ -11,5 +11,6 @@
     "files": ["assets/fonts/Ortica-Bold", "assets/fonts/Ortica-Light"]
   },
   "og_image": "assets/media/images/open-graph/og-image.jpg",
+  "script_path": "assets/js/freedomhood.js",
   "stylesheet_path": "assets/css/app.css"
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partial "head.html" . }}
+  {{ partial "head/head.html" . }}
   <body data-application-render>
+    {{ partial "layout/header.html" . }}
     <main data-application-main-content></main>
-    {{ partial "footer.html" . }}
+    {{ partial "layout/footer.html" . }}
   </body>
 </html>
