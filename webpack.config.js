@@ -26,6 +26,7 @@ module.exports = (env) => {
     },
     plugins: plugins(flag),
     stats: {
+      builtAt: true,
       colors: true,
       entrypoints: false,
       modules: false
