@@ -101,12 +101,11 @@
 
     &-logo {
       justify-self: center;
-      width: 100%;
-      max-width: 355px;
+      width: 356px;
       height: 20px;
 
       @include breakpoint(small only) {
-        max-width: 149px;
+        width: 146px;
         height: 8px;
       }
     }

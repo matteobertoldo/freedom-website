@@ -1,0 +1,10 @@
+<header class="fh-header">
+  <div class="fh-header-menu-button-render">
+    <button aria-label="Open menu" class="fh-header-menu-button" type="button"></button>
+  </div>
+  <a aria-label="{{ .Site.Title }}" class="fh-header-logo" href="{{ .Site.BaseURL }}">
+    <!-- prettier-ignore-->
+    {{ partial "components/svg-sprite-symbol.html" (dict "name" "freedomhood") }}
+  </a>
+  <div class="fh-header-stripe-playing-render"></div>
+</header>
