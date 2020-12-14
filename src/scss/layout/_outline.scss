@@ -1,0 +1,7 @@
+[data-whatinput='mouse'] {
+  button {
+    &:focus {
+      outline: 0;
+    }
+  }
+}
